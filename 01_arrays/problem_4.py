@@ -12,8 +12,6 @@ def positive_numbers(nums):
 
     sum = 0;
 
-    positive = []
-
     for num in nums:
       if num > 0:
         if num < min:
@@ -21,15 +19,12 @@ def positive_numbers(nums):
         if num > max:
           max = num
 
-        positive.append(num)
+        sum = sum + num
 
-    for num in positive:
-      sum = sum + num
-
-    return sum, max, min, positive
+    return sum, max
 
 def fn(nums):
-  sum, max, min, positive = positive_numbers(nums)
+  sum, max = positive_numbers(nums)
 
   expected = max * (max + 1) / 2
   result = 0
