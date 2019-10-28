@@ -6,6 +6,19 @@
 
 # Follow-up: what if you can't use division?
 
+# Easy way using division
+def _products(nums):
+    output = []
+    result = 1
+
+    for num in nums:
+        result = result * num
+
+    for num in nums:
+        output.append(int(result / num))
+
+    return output
+
 def get_product(nums):
     # Generate prefix products
     prefix_products = []
